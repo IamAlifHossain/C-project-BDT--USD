@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 int main(){
-    float taka, dollar;
+    float taka, dollar, exchange_rate;
     int b100, b50, b20, b10, b5, b2, b1;
     int c50, c25, c10, c5, c1;
     int total_cent;
@@ -9,7 +9,10 @@ int main(){
     printf("Enter amount in TAKA : ");
     scanf("%f", &taka);
 
-    dollar = taka/122.99;
+    printf("Enter Exchange Rate : ");
+    scanf("%f", &exchange_rate);
+
+    dollar = taka/exchange_rate;
 
     printf("Dollar : $%.2f\n", dollar);
     
@@ -68,9 +71,5 @@ int main(){
     if(c5>0){printf("5c coins   : %d\n", c5);}
     if(c1>0){printf("1c coins   : %d\n", c1);}
 
-
-
-
-
-
+    return 0;
 }
